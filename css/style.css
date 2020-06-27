@@ -66,6 +66,8 @@ ul {
 .list-header {
   display: flex;
   /* margin-right: 50px; */
+  /* outline: 3px solid blueviolet; */
+  align-items: center;
 }
 
 .list-header .item:not(:last-child) {
@@ -131,15 +133,75 @@ ul {
 }
 
 /* color style for address */ 
+.address-header {
+  display: flex;
+  /* align-items: center; */
+
+}
+
 .list-address .link {
+  display: flex;
+  align-items: center;
   color: var(--text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .list-address {
-  display: flex;  
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: flex;
   font-style: normal;
+  align-items: center;
+  justify-content: center;
+  /* outline: 3px solid aqua; */
+  
+}
+
+/* .list-address.item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+} */
+
+/* .mail::before {
+  content: "";
+  display: inline-flex;  
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/mailHeader.svg);
+  background-repeat: no-repeat;
+ 
+}
+
+.tel::before {
+  content: "";
+  display: inline-flex;
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  background-image: url(../images/smartphoneHeader.svg);
+  background-repeat: no-repeat;
+} */
+
+
+
+.mailHeader {
+  display: inline-flex;
+  width: 16px;
+  height: 12px;
+  align-items: center;
+  margin-right: 10px; 
+}
+
+.mailHeader:hover {
+  color: var(--accent-color);
+}
+
+.telHeader {
+  display: inline-flex;
+  width: 10px;
+  height: 16px;  
+  margin-right: 10px;
 }
 
 .list-address .item:not(:last-child) {
@@ -160,7 +222,9 @@ ul {
 .list-header .link:hover,
 .list-header .link:focus,
 .address-header .link:hover,
-.address-header .link:focus {
+.address-header .link:focus,
+.list-address .mail:hover,
+.list-address .mail:focus {
   color: var(--accent-color);
 } 
 
@@ -204,9 +268,17 @@ ul {
 /* hero img */
 .hero-img {
   text-align: center;
-  background-image: url(../images/HeaderImg.jpg);
-  /* background-color: rgba(47, 48, 58, 0.8); */
-  width: 1600px;
+  background-color: #000000;
+  /* background-image: rgba(47, 48, 58, 0.8); */
+  background-image: linear-gradient(
+     rgba(47, 48, 58, 0.8),
+     rgba(47, 48, 58, 0.8)
+     ),
+     url(../images/HeaderImg75.jpg);  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
   height: 600px;  
   padding-top: 94px;
   margin-left: auto;
@@ -244,6 +316,23 @@ ul {
 }
 
 /* title-features styles */
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    margin-bottom: 30px;
+    height: 120px;
+    width: 270px;
+    border-radius: 4px;
+}
+
+.icon-antena {
+  width: 70px;
+  height: 70px;
+}
+
 .title-features {
   font-weight: 700; 
   line-height: 1.14;
@@ -316,17 +405,23 @@ ul {
 }
 
 /* section Наша команда */
-.team {
+/* .team {
   background: #F5F4FA;
-}
+} */
 /* team setcion style  */
 .list-team .item {
   background-color: var(--primary-text-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 
+              0px 1px 1px rgba(0, 0, 0, 0.14), 
+              0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;  
+  
   /* width: 270px;
   height: 422px; */
   /* margin-bottom: 94px; */
 }
 /* title-team styles */
+
 .title-team {  
   font-weight: 500;
   font-size: 16px;
@@ -342,17 +437,39 @@ ul {
   margin-bottom: 30px;
 }
 
+.icon-social {
+  width: 20px;
+  height: 20px;
+ 
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.social-link:hover{
+  fill: var(--body-color);
+  background-color: var(--accent-color);
+}
+
 /* list-team */
 .list-team {
-  display: flex;
+  display: flex;  
 }
 
 /* list-social */
 .list-social   {  
   display: flex;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 24px;  
 }
+
+
 /* team position styles*/
 .list-team .text {
   color: var(--text-color);
@@ -373,10 +490,10 @@ ul {
 /* .list-client */
 
 .list-client .item {
-  border: 2px solid #AFB1B8;
+  border: 1px solid #AFB1B8;
   height: 90px;
   width: 170px;
-  border-radius: 5px; 
+  border-radius: 4px; 
   
   display: flex;
   justify-content: center;
@@ -388,10 +505,51 @@ ul {
 .list-client .item:focus,
 .list-client .link:hover,
 .list-client .link:focus{
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   color: var(--accent-color)
 }
 
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px; 
+}
+
+.icon-client {
+  width: 50px;
+  height: 50px;
+}
+
+.yaco {
+  width: 45px;
+  height: 50px;
+}
+.companyTagLineHere {
+ width: 50px;
+ height: 52px;
+}
+
+.company {
+  width: 41px;
+  height: 43px;
+}
+
+.fosterPeters {
+  width: 80px;
+  height: 42px;
+}
+
+.brand {
+  width: 59px;
+  height: 47px;
+}
+
+.companyTagLine {
+  width: 89px;
+  height: 45px;
+}
 
 /* footer */
 .footer {
@@ -411,7 +569,7 @@ ul {
 }
 
 .section-address {
-  padding-bottom: 28px;
+  padding-bottom: 25px;
   margin-right: 69px;
 }
 
@@ -469,8 +627,7 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
-  
+  text-transform: uppercase;  
   display: block;
   padding-bottom: 20px;
 }
@@ -481,17 +638,39 @@ ul {
 
 /* footer social styles */
 .list-subscribe .link {
-  background-color: var(--footer-social);
+  /* background-color: var(--footer-social);
   color: var(--primary-text-color);
   display: block;
-  text-align: center;
+  text-align: center; */
+  border-radius: 50%;
 }
 
 .list-subscribe {
   display: flex;
-  justify-content: center;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px; 
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;  
+}
+
+.icon-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Подписка футер */
 .list-news {
   display: flex;
 }
@@ -499,6 +678,18 @@ ul {
 .list-subscribe .link:focus,
 .list-subscribe .link:hover {
   color: var(--accent-color);
+}
+
+.email {
+  color: var(--primary-text-color);
+  width: 358px;
+  height: 60px;
+  background-color: var(--footer-bgc);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-right: 12px;
+  padding: 12px;
 }
 
 /* copywriting style */
@@ -631,6 +822,6 @@ padding-top: 4px;
 }
 
 /* background-color team */
- .section.bgc-team {
+ .bgc-team {
   background-color: #F5F4FA;
 }
