@@ -14,6 +14,7 @@
   --primary-text-color: #FFFFFF; 
   --footer-bgc: #2F303A;
   --footer-social:rgba(100%, 100%, 100%, 10%);
+  --icon-color: #AFB1B8;
 }
 
 body {
@@ -191,6 +192,7 @@ ul {
   height: 12px;
   align-items: center;
   margin-right: 10px; 
+  fill: currentColor;
 }
 
 .mailHeader:hover {
@@ -202,6 +204,7 @@ ul {
   width: 10px;
   height: 16px;  
   margin-right: 10px;
+  fill: currentColor
 }
 
 .list-address .item:not(:last-child) {
@@ -437,11 +440,19 @@ ul {
   margin-bottom: 30px;
 }
 
+.icon-social:hover,
+.icon-social:focus, 
+.social-link:hover,
+.social-link:focus {
+  fill: var(--primary-text-color);
+  background-color: var(--accent-color);
+}
+
 .icon-social {
   width: 20px;
   height: 20px; 
+  fill: var(--icon-color);
 }
-
 .social-link {
     display: flex;
     justify-content: center;
@@ -449,11 +460,6 @@ ul {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-}
-
-.social-link:hover{
-  fill: var(--body-color);
-  background-color: var(--accent-color);
 }
 
 /* list-team */
@@ -467,6 +473,12 @@ ul {
   justify-content: center;
   margin-bottom: 24px;  
 }
+
+/* .list-social:hover,
+.list-social:focus {
+  fill: var(--primary-text-color);
+  background-color: var(--accent-color);
+ } */
 
 
 /* team position styles*/
@@ -519,6 +531,7 @@ ul {
 .icon-client {
   width: 50px;
   height: 50px;
+  fill: var(--icon-color);
 }
 
 .yaco {
@@ -665,6 +678,7 @@ ul {
   justify-content: center;  
   width: 20px;
   height: 20px;
+  fill: var(--primary-text-color);
 }
 
 .footer-social:hover {
@@ -685,13 +699,39 @@ ul {
 .email {
   color: var(--primary-text-color);
   width: 358px;
-  height: 60px;
+  height: 50px;
   background-color: var(--footer-bgc);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-right: 12px;
   padding: 12px;
+  
+}
+
+.list-news .link {
+  display: inline-flex;
+  padding: 10px 29px;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  align-items: center;
+  border-radius: 4px;
+}
+
+.icon-news {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.icon-plane{
+  max-width: 200px;
+  max-height: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
 }
 
 /* copywriting style */
