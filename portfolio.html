@@ -28,24 +28,30 @@
             </li>
           </ul>
     <!-- контакты -->
-        <address class="address-header"> 
-          <ul class="list-address list">
-            <!-- електроннaя почтa -->
-            <li class="item">
-              <a href="mailto:info@devstudio.com" class="link">
-                <img src="./images/mailHeader.svg" alt="email">
-                info@devstudio.com
-              </a> 
-            </li>
-            <!-- телефон -->
-            <li class="item">
-              <a href="tel:+38 096 111 11 11" class="link">
-                <img src="./images/smartphoneHeader.svg" alt="email">
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-        </address>
+    <address class="address-header "> 
+      <ul class="list-address list">
+        <!-- електроннaя почтa -->
+        <li class="item">
+          <a href="mailto:info@devstudio.com" class="link mail">
+            <!-- <img src="./images/mailHeader.svg" alt="email"> -->
+            <svg class="icon mailHeader">
+              <use href="./images/sprite.svg#icon-mailHeader"></use>
+            </svg>
+            info@devstudio.com
+          </a> 
+        </li>
+        <!-- телефон -->
+        <li class="item">
+          <a href="tel:+38 096 111 11 11" class="link tel">
+            <!-- <img src="./images/smartphoneHeader.svg" alt="email"> -->
+            <svg class="icon telHeader">
+              <use href="./images/sprite.svg#icon-smartphoneHeader"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+    </address>    
         </nav>
       </header>
       <!-- Main -->
@@ -237,23 +243,31 @@
             <b class="cosial-subscribe">присоединяйтесь</b>
             <ul class="list-subscribe list">
               <li>
-                <a href="" aria-label="Ссылка на Instagram" class="link">
-                  Instagram
+                <a href="" aria-label="Ссылка на Instagram" class="link footer-social">
+                  <svg class="icon-footer">
+                    <use href="./images/sprite.svg#icon-logoInsta"></use>
+                  </svg>
                 </a>
               </li>
               <li>
-                <a href="" aria-label="Ссылка на Twitter" class="link">
-                  Twitter
+                <a href="" aria-label="Ссылка на Twitter" class="link footer-social">
+                  <svg class="icon-footer">
+                    <use href="./images/sprite.svg#icon-logoTwitter"></use>
+                  </svg>
                 </a>
               </li>
               <li>
-                <a href="" aria-label="Ссылка на Facebook" class="link">
-                  Facebook
+                <a href="" aria-label="Ссылка на Facebook" class="link footer-social">
+                  <svg class="icon-footer">
+                    <use href="./images/sprite.svg#icon-logoFacebook"></use>
+                  </svg>
                 </a>
               </li>
               <li>
-                <a href="" aria-label="Ссылка на LinkedIn" class="link">
-                  LinkedIn
+                <a href="" aria-label="Ссылка на LinkedIn" class="link footer-social">
+                  <svg class="icon-footer">
+                    <use href="./images/sprite.svg#icon-logoLinkedin"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -263,7 +277,7 @@
             <b class="cosial-subscribe">Подпишитесь на рассылку</b>   
             <ul class="list-news">
               <li>
-                <input type="text" value="E-mail">
+                <input type="text" value="E-mail" class="email">
               </li>
               <li>
                 <button>
