@@ -63,6 +63,8 @@ ul {
   color: var(--accent-color);  
 }
 
+
+
 /* nav-header styles */
 .list-header {
   display: flex;
@@ -121,6 +123,9 @@ ul {
 /* link hover & link focus */
 .link:hover,
 .link:focus {
+  color: var(--accent-color);
+}
+.list-header .item .current-page {
   color: var(--accent-color);
 }
 
@@ -182,7 +187,6 @@ ul {
   background-image: url(../images/smartphoneHeader.svg);
   background-repeat: no-repeat;
 } */
-
 
 
 .mailHeader {
@@ -420,7 +424,7 @@ ul {
   
   /* width: 270px;
   height: 422px; */
-  /* margin-bottom: 94px; */
+
 }
 /* title-team styles */
 
