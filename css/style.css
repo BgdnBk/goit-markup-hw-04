@@ -440,26 +440,36 @@ ul {
   margin-bottom: 30px;
 }
 
-.icon-social:hover,
-.icon-social:focus, 
-.social-link:hover,
-.social-link:focus {
+/* .icon-social:hover ,
+.icon-social:focus  {
   fill: var(--primary-text-color);
-  background-color: var(--accent-color);
-}
+} */
 
-.icon-social {
-  width: 20px;
-  height: 20px; 
-  fill: var(--icon-color);
-}
 .social-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: 50%;  
+    fill: var(--icon-color); 
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;   
+}
+
+.social-link:hover ,
+.social-link:focus { 
+  background-color: var(--accent-color);
+  fill: var(--primary-text-color);  
+  
+}
+
+.list-social .item:hover {
+  background-color: var(--accent-color);
+  fill: var(--primary-text-color); 
 }
 
 /* list-team */
@@ -470,8 +480,19 @@ ul {
 /* list-social */
 .list-social   {  
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 24px;  
+
+}
+
+.list-social .item { 
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.list-social .item:not(:last-child) {
+  margin-right: 10px;
 }
 
 /* .list-social:hover,
